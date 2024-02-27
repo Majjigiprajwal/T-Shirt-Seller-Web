@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ProductProvider } from './context/ProductContext';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import Modal from 'react-modal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+Modal.setAppElement("#root");
+ 
 root.render(
   <React.StrictMode>
   <ProductProvider>
+    <ToastContainer />
      <App />
   </ProductProvider>
   </React.StrictMode>
