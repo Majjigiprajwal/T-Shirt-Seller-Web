@@ -4,7 +4,11 @@ import Cart from './Cart'
 const Header = () => {
   return (
     <div className='w-full h-16 bg-white flex items-center justify-between p-6'>
-      <h1 className="text-3xl font-serif bg-black rounded-full p-2 text-white">T-Shirt Seller</h1>
+      <ul className="text-black flex  list-none gap-10 text-2xl font-serif font-medium">
+        <li>Home</li>
+        <li>Store</li>
+        <li>About</li>
+      </ul>
       <Cart />
     </div>
   )

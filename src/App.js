@@ -1,28 +1,28 @@
+// App.js
+
 import React from 'react';
-import './App.css';
-import AddProductForm from './components/AddProductForm';
-import ProductList from './components/ProductList';
-import Header from './components/Header';
+import { BrowserRouter as Router, Route, Routes,Navigate} from 'react-router-dom';
+import Login from './components/Auth/Login';
+import SignUp from './components/Auth/Signup';
+import Home from './pages/Home'
+import Store from './pages/Store'
+import Cart from './pages/Cart'
 
-
-
-function App() {
-  
+const App = () => {
   return (
-    <div className="w-full min-h-screen bg-black">
-          <div className="w-full">
-          <Header />
-          </div>
-          <div className="w-full flex justify-center">
-          <AddProductForm />
-          </div>
-          <div className='w-full flex justify-center '>
-            <ProductList />
-          </div>
-         
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
 

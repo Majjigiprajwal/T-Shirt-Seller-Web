@@ -20,7 +20,7 @@ const Cart = () => {
   return (
       <>
       <button onClick={openModal} className="text-3xl mr-10 pr-2 pl-2 pt-1 pb-1 rounded-full bg-black  text-white items-center justify-center  flex">
-        <FaShoppingCart /> <span className="mb-6 text-base font-bold">{state.cart.length}</span>
+        <FaShoppingCart /> <span className="mb-6 text-base font-bold"></span>
       </button>
       <Modal isOpen={isModalOpen}   className="flex  justify-center items-center h-screen w-full">
       <div className="bg-black rounded-lg w-4/6 h-5/6  flex flex-col  items-center no-scrollbar ">
